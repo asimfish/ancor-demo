@@ -315,7 +315,7 @@
             <text x="280" y="47" text-anchor="middle" font-size="19" font-weight="800" fill="#e9fbf7">37,567,758 · 全库语料扫描</text>
             <text x="280" y="103" text-anchor="middle" font-size="18" font-weight="700" fill="#d6f4ee">8,844 · LLZO 命中池</text>
             <text x="280" y="159" text-anchor="middle" font-size="16" font-weight="700" fill="#c2ebe3">500 精筛 · 302 领域判定</text>
-            <text x="280" y="215" text-anchor="middle" font-size="15" font-weight="700" fill="#aederd6">100 · 全文深读</text>
+            <text x="280" y="215" text-anchor="middle" font-size="15" font-weight="700" fill="#aedfd6">100 · 全文深读</text>
             <text x="280" y="271" text-anchor="middle" font-size="16" font-weight="800" fill="#f6c344">10 · Research Gap</text>
             <circle cx="262" cy="0" r="3" fill="#6cf0dc"><animate attributeName="cy" values="20;285" dur="2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;.05" dur="2.8s" repeatCount="indefinite"/></circle>
             <circle cx="300" cy="0" r="2.4" fill="#f6c344"><animate attributeName="cy" values="20;285" dur="3.6s" begin="-1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;.05" dur="3.6s" begin="-1.6s" repeatCount="indefinite"/></circle>
@@ -360,7 +360,7 @@
     <div class="eyebrow reveal" style="--d:.08s">01 · CORPUS</div>
     <div class="mega">
       <div class="num reveal" style="--d:.16s" id="megaNum">0</div>
-      <div class="unit reveal" style="--d:.28s">篇 DOI + Markdown 全文 · MinerU 解析 · 15 个分片并行，全库扫描仅需 <b style="color:var(--gold)">462 秒</b></div>
+      <div class="unit reveal" style="--d:.28s">篇 DOI 对齐的 Markdown 全文 · MinerU 解析 · 15 个 Parquet 分片并行扫描 · 实测耗时 <b style="color:var(--gold)">462 s</b></div>
       <div class="cmp">
         <div class="card glass reveal" style="--d:.4s">
           <div class="k">同类系统 SciAgents</div>
@@ -387,15 +387,15 @@
       <span>规则筛在 CEDER 集回放召回率 <i>99.41%</i> · 逆合成候选库 1,713 万条</span>
       <span>s2_scan_stats.json</span>
     </div>
-    <template class="notes-template">这页只讲规模。3,757 万自建全文，全库扫描 462 秒。下面滚动的是真实的语料分片：按出版社切的 parquet。对比 SciAgents 千篇级、官方 Sci-Base 两千五百万。我们的空白是全库计数出来的。</template>
+    <template class="notes-template">本页说明语料规模与检索吞吐：自建语料含 3,757 万篇 DOI 对齐的 Markdown 全文，15 个 Parquet 分片并行扫描的实测耗时为 462 秒。下方滚动展示语料分片；右侧比较 SciAgents 与 Sci-Base 的语料规模。</template>
   </section>
 
   <!-- 3 funnel -->
-  <section class="slide" data-title="3,757 万篇筛成十条">
+  <section class="slide" data-title="分级筛选与证据收敛">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">02 · FUNNEL</div>
-    <h2 class="title reveal" style="--d:.16s">3,757 万篇怎么筛成<i>十条</i></h2>
-    <p class="lede reveal" style="--d:.24s">每一级都有落盘文件，评委可对照附件逐级复现。</p>
+    <h2 class="title reveal" style="--d:.16s">从全库检索到研究问题：<i>分级筛选与证据收敛</i></h2>
+    <p class="lede reveal" style="--d:.24s">主题检索、模型筛选、全文深读与 Gap 复核均保留对应落盘产物，可逐级复算。</p>
     <div class="funnel">
       <div class="frow reveal" style="--d:.3s"><div class="fl"><b>全库扫描</b>s2_scan_stats.json</div><div class="track"><div class="fbar" style="--w:100%;--d:.35s"></div></div><div class="fv">37,567,758<small>篇</small></div></div>
       <div class="frow reveal" style="--d:.38s"><div class="fl"><b>主题词族检索</b>规则 M1–M5</div><div class="track"><div class="fbar" style="--w:72%;--d:.43s"></div></div><div class="fv">8,844<small>篇</small></div></div>
@@ -410,33 +410,33 @@
       <span>348 篇人工标注校准 · 召回 <i>95.2%</i> · 独立测试 P/R/F1 <i>89.66%</i></span>
       <span>1,922 = 温度 1129 / 电导 312 / 致密 242 / 气氛 239</span>
     </div>
-    <template class="notes-template">漏斗是原料账。八千八百四十四篇 LLZO，深读一百篇，抽出一千九百二十二条带 DOI 和逐字原文的字段。七十六条候选裁成十条。27B 先在三百四十八篇人工标注上校准，召回优先；独立测试 F1 89.66%。</template>
+    <template class="notes-template">本页展示分级筛选与证据收敛过程：全库检索得到 8,844 篇 LLZO 相关文献，深读 100 篇并抽取 1,922 条带 DOI 和原文位置的字段级证据，随后将 76 条候选复核为 10 条候选 Research Gap。27B 筛选模型先在 348 篇人工标注数据上校准，独立测试 F1 为 89.66%。</template>
   </section>
 
   <!-- 4 matrix -->
-  <section class="slide" data-title="点开空白格">
+  <section class="slide" data-title="掺杂体系—烧结路线证据矩阵">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">03 · 效果 · 知识矩阵</div>
-    <h2 class="title reveal" style="--d:.16s">21 × 8 掺杂 × 烧结路线共现矩阵。<em>零共现格是查重型候选的来源。</em></h2>
+    <h2 class="title reveal" style="--d:.16s">掺杂体系—烧结路线的<em>段落级证据覆盖矩阵</em></h2>
     <div class="console">
       <div class="mx glass reveal" style="--d:.26s">
-        <div class="mx-head"><div class="k">段落级共现 · 全命中池 8,844 篇</div><span>金色 = 零共现 · 红格 = 已否决 · 64 格均可点击</span></div>
+        <div class="mx-head"><div class="k">21 类掺杂体系 × 8 类烧结路线 · 全命中池 8,844 篇</div><span>金色 = 当前检索式下零共现 · 红格 = 复核后否决 · 64 格可查看证据</span></div>
         <div class="heat" id="heat"></div>
       </div>
       <aside class="insp glass reveal" style="--d:.38s" id="insp"></aside>
     </div>
     <div class="foot reveal" style="--d:.5s">
-      <span>和 SciAgents 的差别：他们靠图上随机游走；我们在全库矩阵上<i>数零共现</i></span>
+      <span>矩阵用于定位证据稀疏组合；零共现仅触发别名复检与原文排噪，<i>不直接构成新颖性结论</i></span>
       <span>s7_pool_matrix.csv</span>
     </div>
-    <template class="notes-template">效果页，让评委随便点：64 格每格都有话讲。金色是零共现。默认停在 Sb 乘低温。点 Gd 看演示确立，点 Nd 看否决，点 Ta 乘常规看基线（163 条，全表最密）。空格来自全库计数。</template>
+    <template class="notes-template">矩阵统计 21 类掺杂体系与 8 类烧结路线的段落级共现。金色表示当前检索式下零共现，但零共现只用于触发别名复检和原文排噪，不能直接证明研究空白。默认展示 Sb × 低温；Gd 展示保留案例，Nd 展示否决案例，Ta × 常规用于对照高覆盖组合。</template>
   </section>
 
   <!-- 5 gaps -->
-  <section class="slide" data-title="十条已确立的发现">
+  <section class="slide" data-title="10 条候选 Research Gap">
     <div class="bg-field"></div><div class="grid-field"></div>
-    <div class="eyebrow reveal" style="--d:.08s">04 · 效果 · 十条 Gap</div>
-    <h2 class="title reveal" style="--d:.16s">查重型 5 · 冲突型 2 · 拼图型 3。<i>每条都可实验验证。</i></h2>
+    <div class="eyebrow reveal" style="--d:.08s">04 · 结果 · 候选 Research Gap</div>
+    <h2 class="title reveal" style="--d:.16s">10 条候选 Research Gap 的<em>证据边界与验证路径</em></h2>
     <div class="ggrid">
       <div class="gcard glass reveal" style="--d:.28s"><div class="k">G-01 查重 · 优先</div><h3>Sb × &lt;900°C 助烧剂</h3><p>121 篇 Sb 文献，低温有效先例 <b>0</b>。首个决策点：Sb 掺量 0.4 + Li<sub>3</sub>BO<sub>3</sub> 助烧，750–875°C 梯度 / 6 h / 空气。</p></div>
       <div class="gcard glass reveal" style="--d:.34s"><div class="k">G-02 查重</div><h3>W 已 750°C 成相</h3><p>约 750°C 成相，致密化仍依赖 1100°C 退火；&lt;900°C 致密度与电导<b>未检出报道</b>。</p></div>
@@ -453,14 +453,14 @@
       <span>建议优先推进：G-08 冷烧结矛盾 · G-01 Sb 低温助烧 · G-10 补锂定量</span>
       <span>引句核验 24/24 · DOI 双源确认 14/14</span>
     </div>
-    <template class="notes-template">十条发现是交付物本体。挑两句讲：G-06 更高温度反而更不致密；G-07 同一样品气氛一换电导差四五个数量级。收尾提报告的建议顺序：先做 G-08、G-01、G-10，按证据完整性和可验证性排的。</template>
+    <template class="notes-template">10 条候选 Research Gap 是本轮调研的主要产物。可重点说明 G-06 的跨研究致密度差异，以及 G-07 中气氛协议对电导率可比性的影响。报告建议优先推进 G-08、G-01 和 G-10，排序依据是证据完整性、问题明确程度与实验可验证性。</template>
   </section>
 
   <!-- 6 loop (comet fx) -->
-  <section class="slide" data-title="我们的 Loop 设计" id="loopSlide">
+  <section class="slide" data-title="SAGE-Mat 的 Loop 设计" id="loopSlide">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">05 · 设计 · 假设生成 → 回库查重 → 研究空白判定</div>
-    <h2 class="title reveal" style="--d:.16s">我们的 <em>Loop</em> 设计</h2>
+    <h2 class="title reveal" style="--d:.16s">SAGE-Mat 的 <em>Loop</em> 设计</h2>
     <div class="loop2 reveal" id="loopStage" style="--d:.28s">
       <svg class="ringsvg" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
         <defs><marker id="lpG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f6c344"/></marker></defs>
@@ -495,10 +495,10 @@
   </section>
 
   <!-- 7 gates + arch fig -->
-  <section class="slide" data-title="四类校准，各有停止条件">
+  <section class="slide" data-title="四类校准机制与结果准入条件">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">06 · 设计 · 四类校准与停止条件</div>
-    <h2 class="title reveal" style="--d:.16s">四类校准。<em>LLM 不能独自决定结果。</em></h2>
+    <h2 class="title reveal" style="--d:.16s">四类校准机制与<em>结果准入条件</em></h2>
     <div class="g7">
       <div class="gates">
         <div class="gate glass reveal" style="--d:.28s"><div class="n">01</div><div class="k">新颖性校准</div><h3>共现计数 = 0</h3><p>段落级共现 + 别名复检 + 伪命中排除。零检出仅表示当前语料与检索式范围内未检出先例。</p></div>
@@ -570,10 +570,10 @@
   </section>
 
   <!-- 8 replay: radar war-room -->
-  <section class="slide" data-title="轨迹回放 · 6 轮真实运行" id="runSlide">
+  <section class="slide" data-title="六轮运行轨迹与候选裁决" id="runSlide">
     <div class="bg-field"></div><div class="grid-field"></div>
-    <div class="eyebrow reveal" style="--d:.08s">07 · 效果 · 轨迹回放 · demo_run_20260816_010419</div>
-    <h2 class="title reveal" style="--d:.14s">2026-08-16 凌晨 01:04，<i>一次真实运行</i></h2>
+    <div class="eyebrow reveal" style="--d:.08s">07 · 运行轨迹 · demo_run_20260816_010419</div>
+    <h2 class="title reveal" style="--d:.14s">六轮运行轨迹：<i>角色调用与候选裁决</i></h2>
     <div class="replay2">
       <div class="radar glass reveal" style="--d:.24s" id="radar">
         <svg id="radarSvg" viewBox="0 0 940 620" preserveAspectRatio="xMidYMid meet">
@@ -616,10 +616,10 @@
   </section>
 
   <!-- 9 route C + route fig -->
-  <section class="slide" data-title="路线 C · 从 Gap 到合成方案">
+  <section class="slide" data-title="经核查的 Research Gap 驱动合成路线规划">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">08 · 路线 C</div>
-    <h2 class="title reveal" style="--d:.16s">空白确立之后，<em>交给逆合成。</em></h2>
+    <h2 class="title reveal" style="--d:.16s">经核查的 Research Gap <em>驱动合成路线规划</em></h2>
     <div class="rc">
       <div class="vflow">
         <div class="vnode glass reveal" style="--d:.28s"><span class="vk">IN</span><div><b>目标材料 · 已核查 Gap</b><span>G-01：Sb0.4 · &lt;900°C 常压 · 相对密度 ≥90%</span></div></div>
@@ -686,16 +686,16 @@
   </section>
 
   <!-- 10 submit -->
-  <section class="slide" data-title="提交这些">
+  <section class="slide" data-title="提交材料与复现入口">
     <div class="bg-field"></div><div class="aurora"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">09 · 交付</div>
-    <h2 class="title reveal" style="--d:.16s">交付包里就是这些</h2>
+    <h2 class="title reveal" style="--d:.16s">提交材料与<em>可复现证据清单</em></h2>
     <div class="orbit-stage">
       <div class="orbit-ring"></div>
       <div class="core glass reveal" style="--d:.32s">
         <div class="logo-c mark-float" data-logo></div>
         <b>SAGE-Mat</b>
-        <small>T1 第一轮外环已跑通</small>
+        <small>T1 第一轮闭环运行完成</small>
       </div>
       <div class="onode glass n1 reveal" style="--d:.46s"><i>报告</i><span>10 条 Gap<br>24 条可核验引句</span></div>
       <div class="onode glass n2 reveal" style="--d:.54s"><i>系统</i><span>三层八角色<br>四类校准</span></div>
@@ -703,8 +703,8 @@
       <div class="onode glass n4 reveal" style="--d:.7s"><i>附件</i><span>12 个流水线脚本<br>执行日志与校验结果</span></div>
       <div class="onode glass n5 reveal" style="--d:.78s"><i>回放</i><span>6 轮 trace<br>确立 1 · 否决 1</span></div>
     </div>
-    <div class="closing reveal" style="--d:.92s">所有数字均可由附件复现</div>
-    <template class="notes-template">收尾列交付物：报告、系统说明、Proposal、证据包、6 轮回放。结束一句：所有数字均可由附件复现。</template>
+    <div class="closing reveal" style="--d:.92s">关键数字均对应脚本、日志或落盘产物</div>
+    <template class="notes-template">本页列出提交材料及复现入口：调研报告、系统说明、路线 Proposal、结构化证据、执行日志、校验结果与六轮运行轨迹。关键数字均附对应脚本、日志或落盘产物。</template>
   </section>
 </main>
 
