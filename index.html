@@ -407,10 +407,10 @@
       <div class="frow gold reveal" style="--d:.86s"><div class="fl"><b>研究空白综合识别</b>三通道 + 双轮查重</div><div class="track"><div class="fbar" style="--w:14%;--d:.91s"></div></div><div class="fv">76 → 10<small>条</small></div></div>
     </div>
     <div class="foot reveal" style="--d:.96s">
-      <span>27B 判定器先过 gold 评估集再部署 · test F1 <i>89.66%</i> · 高召回配置</span>
+      <span>348 篇人工标注校准 · 召回 <i>95.2%</i> · 独立测试 P/R/F1 <i>89.66%</i></span>
       <span>1,922 = 温度 1129 / 电导 312 / 致密 242 / 气氛 239</span>
     </div>
-    <template class="notes-template">漏斗是原料账。八千八百四十四篇 LLZO，深读一百篇，抽出一千九百二十二条带 DOI 和逐字原文的字段。七十六条候选裁成十条。27B 先过评估集，F1 89.66%。</template>
+    <template class="notes-template">漏斗是原料账。八千八百四十四篇 LLZO，深读一百篇，抽出一千九百二十二条带 DOI 和逐字原文的字段。七十六条候选裁成十条。27B 先在三百四十八篇人工标注上校准，召回优先；独立测试 F1 89.66%。</template>
   </section>
 
   <!-- 4 matrix -->
@@ -503,7 +503,7 @@
       <div class="gates">
         <div class="gate glass reveal" style="--d:.28s"><div class="n">01</div><div class="k">新颖性校准</div><h3>共现计数 = 0</h3><p>段落级计数 + 别名复查 + 伪命中排除。模型口头的「没人做过」不作数。</p></div>
         <div class="gate glass reveal" style="--d:.36s"><div class="n">02</div><div class="k">事实校准</div><h3>引句逐字核验</h3><p>s10 逐字匹配，s11 走 Crossref 和 Semantic Scholar。对不上就禁提交。</p></div>
-        <div class="gate glass reveal" style="--d:.44s"><div class="n">03</div><div class="k">判定校准</div><h3>先过 gold 评估集</h3><p>27B 判定器在 348 篇人工标注 gold 集上校准，test F1 89.66%，再投入判定。</p></div>
+        <div class="gate glass reveal" style="--d:.44s"><div class="n">03</div><div class="k">判定校准</div><h3>先过 gold 评估集</h3><p>27B 判定器在 348 篇人工标注上校准，独立测试 P/R/F1 均 89.66%；提示词优化与 LoRA 微调分开评测（61 样本 F1 89.4%、结构化输出合法率 100%），微调版仅作储备。</p></div>
         <div class="gate glass reveal" style="--d:.52s"><div class="n">04</div><div class="k">过程校准</div><h3>全程留痕可审计</h3><p>EXECUTION_LOG、SHA-256、模型修订号。报告数字只能从落盘文件生成。</p></div>
       </div>
       <div class="figcard glass reveal" style="--d:.46s">
