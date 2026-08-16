@@ -32,9 +32,8 @@
     [data-logo] svg { width: 100%; height: 100%; display: block; }
     .mark-float { animation: floaty 5.5s ease-in-out infinite; }
     @keyframes floaty { 50% { transform: translateY(-6px); } }
-    .brand-lock { position: absolute; left: 3.8%; top: 3.2%; z-index: 4; display: flex; align-items: center; gap: .55em; font: 800 clamp(10px,1.05vw,18px)/1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .22em; color: var(--mint); }
+    .brand-lock { position: absolute; right: 3.8%; top: 3.2%; z-index: 4; display: flex; align-items: center; gap: .55em; font: 800 clamp(10px,1.05vw,18px)/1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .22em; color: var(--mint); }
     .brand-lock .mini { width: clamp(22px,2.1vw,36px); height: clamp(22px,2.1vw,36px); }
-    .slide.cover .brand-lock { display: none; }
 
     .eyebrow { font: 700 clamp(10px,1.12vw,20px)/1.2 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .16em; color: var(--mint); text-transform: uppercase; }
     .title { margin: .65% 0 0; font-size: clamp(22px,3.05vw,54px); line-height: 1.14; font-weight: 800; }
@@ -291,17 +290,17 @@
             <div class="k sub">EVIDENCE-ANCHORED RESEARCH AGENT</div>
           </div>
         </div>
-        <div class="punch reveal" style="--d:.3s">从 3757 万篇文献里<br>把 LLZO 的烧结空白找出来</div>
-        <p class="lede reveal" style="--d:.42s">文献调研 Agent 先把研究空白立住，逆合成 Agent 再在证据约束下给路线。<br>这次跑通的题目：石榴石固态电解质 <b>Li<sub>7</sub>La<sub>3</sub>Zr<sub>2</sub>O<sub>12</sub></b> 怎么烧得更致密。</p>
+        <div class="punch reveal" style="--d:.3s">从 3,757 万篇文献里<br>找出 LLZO 烧结工艺的研究空白</div>
+        <p class="lede reveal" style="--d:.42s">文献调研 Agent 先确立研究空白，逆合成 Agent 再在证据约束下设计合成路线。<br>本次跑通的课题：石榴石型固态电解质 <b>Li<sub>7</sub>La<sub>3</sub>Zr<sub>2</sub>O<sub>12</sub></b> 的烧结致密化。</p>
         <div class="chips reveal" style="--d:.54s">
           <span class="chip"><b>37,567,758</b> 篇自建全文</span>
-          <span class="chip"><b>10</b> 条终审 Gap</span>
-          <span class="chip"><b>24/24</b> 引句对得上原文</span>
-          <span class="chip gold"><b>6 轮</b> 现场可回放</span>
+          <span class="chip"><b>10</b> 条人工终审 Gap</span>
+          <span class="chip"><b>24/24</b> 引句逐字核验</span>
+          <span class="chip gold"><b>6 轮</b> trace 可回放</span>
         </div>
       </div>
       <div class="shots reveal" style="--d:.4s">
-        <span class="livebadge">LIVE · 每个数字可复算</span>
+        <span class="livebadge">LIVE · 全部数字可复现</span>
         <div class="shot s1">
           <div class="cap"><span>FIG.1 · 检索漏斗</span><i>37.5M → 10</i></div>
           <svg class="dfig" viewBox="0 0 560 300" aria-hidden="true">
@@ -334,7 +333,7 @@
               <circle cx="280" cy="50" r="26" fill="#07242f" stroke="#6cf0dc" stroke-opacity=".6" stroke-width="1.4"/><text x="280" y="55" text-anchor="middle" fill="#6cf0dc">调研</text>
               <circle cx="358" cy="95" r="26" fill="#07242f" stroke="#6cf0dc" stroke-opacity=".6" stroke-width="1.4"/><text x="358" y="100" text-anchor="middle" fill="#6cf0dc">抽取</text>
               <circle cx="358" cy="185" r="26" fill="#07242f" stroke="#6cf0dc" stroke-opacity=".6" stroke-width="1.4"/><text x="358" y="190" text-anchor="middle" fill="#6cf0dc">假设</text>
-              <circle cx="280" cy="230" r="26" fill="#07242f" stroke="#6cf0dc" stroke-opacity=".6" stroke-width="1.4"/><text x="280" y="235" text-anchor="middle" fill="#6cf0dc">回检</text>
+              <circle cx="280" cy="230" r="26" fill="#07242f" stroke="#6cf0dc" stroke-opacity=".6" stroke-width="1.4"/><text x="280" y="235" text-anchor="middle" fill="#6cf0dc">核查</text>
               <circle cx="202" cy="185" r="26" fill="#0a1a20" stroke="#ff5c78" stroke-opacity=".75" stroke-width="1.4"/><text x="202" y="190" text-anchor="middle" fill="#ff5c78">裁决</text>
               <circle cx="202" cy="95" r="26" fill="#0a1a20" stroke="#f6c344" stroke-opacity=".75" stroke-width="1.4"/><text x="202" y="100" text-anchor="middle" fill="#f6c344">终审</text>
             </g>
@@ -346,25 +345,25 @@
       </div>
     </div>
     <div class="foot reveal" style="--d:.68s">
-      <span>循证自循环 · 无机材料逆合成</span>
-      <span>T1 已跑完一整圈 · 数字都能从附件包复算</span>
+      <span>证据锚定 · 自循环 · 无机逆合成</span>
+      <span>T1 完成第一轮外环 · 数字均可由附件复现</span>
     </div>
-    <template class="notes-template">开场：左边是队标 ANCOR，锚。右边两块屏是系统一览：漏斗怎么把 3757 万收成 10 条，循环怎么在证据里转。一句话定位：文献调研 Agent 立住空白，逆合成 Agent 在证据里给路线，题目收在 LLZO 烧结致密化。</template>
+    <template class="notes-template">开场：左边是队标 ANCOR，锚。右边两块屏是系统一览：漏斗怎么把 3,757 万筛成 10 条，循环怎么在证据里转。一句话定位：文献调研 Agent 确立空白，逆合成 Agent 在证据约束下给路线，课题收在 LLZO 烧结致密化。</template>
   </section>
 
   <!-- 2 corpus -->
-  <section class="slide" data-title="自己建了 3757 万篇全文库">
+  <section class="slide" data-title="自建 3,757 万篇全文库">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">01 · CORPUS</div>
     <div class="mega">
       <div class="num reveal" style="--d:.16s" id="megaNum">0</div>
-      <div class="unit reveal" style="--d:.28s">篇 DOI + Markdown 全文 · MinerU 解析 · 15 个分片并行，扫完全库只要 <b style="color:var(--gold)">462 秒</b></div>
+      <div class="unit reveal" style="--d:.28s">篇 DOI + Markdown 全文 · MinerU 解析 · 15 个分片并行，全库扫描仅需 <b style="color:var(--gold)">462 秒</b></div>
       <div class="cmp">
         <div class="card glass reveal" style="--d:.4s">
-          <div class="k">同构系统 SciAgents</div>
+          <div class="k">同类系统 SciAgents</div>
           <h3>约 1,000 篇</h3>
           <div class="bar"><i style="--w:3%"></i></div>
-          <p>知识图来自千篇级抽取，空白靠图上随机走。</p>
+          <p>知识图谱来自千篇级抽取，空白识别靠图上随机游走。</p>
         </div>
         <div class="card glass reveal" style="--d:.5s">
           <div class="k">官方推荐 Sci-Base</div>
@@ -376,36 +375,36 @@
           <div class="k">ANCOR 自建库</div>
           <h3>3,757 万</h3>
           <div class="bar"><i style="--w:100%"></i></div>
-          <p>空白格是全库数出来的，不是抽样，也不是模型感觉。</p>
+          <p>空白由全库计数得出，不是抽样，也不是模型主观判断。</p>
         </div>
       </div>
       <div class="ticker reveal" style="--d:.7s"><div class="roll" id="tickerRoll"></div></div>
     </div>
     <div class="foot reveal" style="--d:.78s">
-      <span>规则筛在 CEDER 回放上召回 <i>99.41%</i> · 逆合成候选库 1,713 万条</span>
+      <span>规则筛在 CEDER 集回放召回率 <i>99.41%</i> · 逆合成候选库 1,713 万条</span>
       <span>s2_scan_stats.json</span>
     </div>
     <template class="notes-template">这页只讲规模。3757 万自建全文，扫一遍 462 秒。下面滚动的是真实的语料分片：按出版社切的 parquet。对比 SciAgents 千篇级、官方 Sci-Base 两千五百万。我们的空白是全库计数出来的。</template>
   </section>
 
   <!-- 3 funnel -->
-  <section class="slide" data-title="3757 万怎么收成十条">
+  <section class="slide" data-title="3,757 万篇筛成十条">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">02 · FUNNEL</div>
-    <h2 class="title reveal" style="--d:.16s">3757 万怎么收成<i>十条</i></h2>
-    <p class="lede reveal" style="--d:.24s">每一级都有落盘文件。评委要复算，对着附件包跑就行。</p>
+    <h2 class="title reveal" style="--d:.16s">3,757 万篇怎么筛成<i>十条</i></h2>
+    <p class="lede reveal" style="--d:.24s">每一级都有落盘文件，评委可对照附件逐级复现。</p>
     <div class="funnel">
       <div class="frow reveal" style="--d:.3s"><div class="fl"><b>全库扫描</b>s2_scan_stats.json</div><div class="track"><div class="fbar" style="--w:100%;--d:.35s"></div></div><div class="fv">37,567,758<small>篇</small></div></div>
       <div class="frow reveal" style="--d:.38s"><div class="fl"><b>LLZO 词族命中</b>规则 M1–M5</div><div class="track"><div class="fbar" style="--w:72%;--d:.43s"></div></div><div class="fv">8,844<small>篇</small></div></div>
       <div class="frow reveal" style="--d:.46s"><div class="fl"><b>烧结主题</b>烧结词 ≥ 2</div><div class="track"><div class="fbar" style="--w:56%;--d:.51s"></div></div><div class="fv">2,655<small>篇</small></div></div>
       <div class="frow reveal" style="--d:.54s"><div class="fl"><b>精筛集</b>确定性 Top-500</div><div class="track"><div class="fbar" style="--w:40%;--d:.59s"></div></div><div class="fv">500<small>篇</small></div></div>
-      <div class="frow reveal" style="--d:.62s"><div class="fl"><b>27B 判定阳性</b>结构化错误 0</div><div class="track"><div class="fbar" style="--w:30%;--d:.67s"></div></div><div class="fv">302<small>篇</small></div></div>
+      <div class="frow reveal" style="--d:.62s"><div class="fl"><b>27B 判定阳性</b>结构化解析失败 0</div><div class="track"><div class="fbar" style="--w:30%;--d:.67s"></div></div><div class="fv">302<small>篇</small></div></div>
       <div class="frow reveal" style="--d:.7s"><div class="fl"><b>深读全文</b>阳性 Top-100</div><div class="track"><div class="fbar" style="--w:20%;--d:.75s"></div></div><div class="fv">100<small>篇</small></div></div>
       <div class="frow gold reveal" style="--d:.78s"><div class="fl"><b>字段级证据</b>温度 / 电导 / 致密 / 气氛</div><div class="track"><div class="fbar" style="--w:26%;--d:.83s"></div></div><div class="fv">1,922<small>条</small></div></div>
       <div class="frow gold reveal" style="--d:.86s"><div class="fl"><b>候选 → 终选</b>三通道 + 双轮查重</div><div class="track"><div class="fbar" style="--w:14%;--d:.91s"></div></div><div class="fv">76 → 10<small>条</small></div></div>
     </div>
     <div class="foot reveal" style="--d:.96s">
-      <span>27B 判定先过评估集再上岗 · test F1 <i>89.66%</i> · 高召回取向</span>
+      <span>27B 判定器先过 gold 评估集再部署 · test F1 <i>89.66%</i> · 高召回配置</span>
       <span>1,922 = 温度 1129 / 电导 312 / 致密 242 / 气氛 239</span>
     </div>
     <template class="notes-template">漏斗是原料账。八千八百四十四篇 LLZO，深读一百篇，抽出一千九百二十二条带 DOI 和逐字原文的字段。七十六条候选裁成十条。27B 先过评估集，F1 89.66%。</template>
@@ -415,41 +414,41 @@
   <section class="slide" data-title="点开空白格">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">03 · 效果 · 知识矩阵</div>
-    <h2 class="title reveal" style="--d:.16s">21 × 8 的掺杂×路线表。<em>空格就是候选。</em></h2>
+    <h2 class="title reveal" style="--d:.16s">21 × 8 掺杂 × 烧结路线共现矩阵。<em>零共现就是候选。</em></h2>
     <div class="console">
       <div class="mx glass reveal" style="--d:.26s">
-        <div class="mx-head"><div class="k">段落级共现 · 全命中池 8,844 篇</div><span>金色零共现 · 红格是否决 · 64 格全都能点</span></div>
+        <div class="mx-head"><div class="k">段落级共现 · 全命中池 8,844 篇</div><span>金色 = 零共现 · 红格 = 已否决 · 64 格均可点击</span></div>
         <div class="heat" id="heat"></div>
       </div>
       <aside class="insp glass reveal" style="--d:.38s" id="insp"></aside>
     </div>
     <div class="foot reveal" style="--d:.5s">
-      <span>和 SciAgents 的差别：他们在图上随机走；我们在全库矩阵上<i>数空格</i></span>
+      <span>和 SciAgents 的差别：他们靠图上随机游走；我们在全库矩阵上<i>数零共现</i></span>
       <span>s7_pool_matrix.csv</span>
     </div>
     <template class="notes-template">效果页，让评委随便点：64 格每格都有话讲。金色是零共现。默认停在 Sb 乘低温。点 Gd 看演示确立，点 Nd 看否决，点 Ta 乘常规看基线（163 条，全表最密）。空格来自全库计数。</template>
   </section>
 
   <!-- 5 gaps -->
-  <section class="slide" data-title="十条已经立住的发现">
+  <section class="slide" data-title="十条已确立的发现">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">04 · 效果 · 十条 Gap</div>
-    <h2 class="title reveal" style="--d:.16s">查重 5 · 冲突 2 · 拼图 3。<i>每条都能做实验。</i></h2>
+    <h2 class="title reveal" style="--d:.16s">查重型 5 · 冲突型 2 · 拼图型 3。<i>每条都可实验验证。</i></h2>
     <div class="ggrid">
       <div class="gcard glass reveal" style="--d:.28s"><div class="k">G-01 查重</div><h3>Sb × &lt;900°C 助烧剂</h3><p>121 篇 Sb 文献，低温有效先例 <b>0</b>。第一步：Sb0.4 + Li<sub>3</sub>BO<sub>3</sub>，825°C/6h。</p></div>
-      <div class="gcard glass reveal" style="--d:.34s"><div class="k">G-02 查重</div><h3>W 已 750°C 成相</h3><p>成相有了，致密度和晶界电导<b>没人报</b>。</p></div>
-      <div class="gcard glass reveal" style="--d:.4s"><div class="k">G-03 查重</div><h3>Ba × 助烧剂</h3><p>Ba-Ta 共掺要走 1230°C。助烧剂降温，段落共现 <b>0</b>。</p></div>
-      <div class="gcard glass reveal" style="--d:.46s"><div class="k">G-04 查重</div><h3>Y × 两步烧结</h3><p>两步在 Ta/Al/Nb 有先例，Y/Ce/Mg 等<b>全是空的</b>。</p></div>
+      <div class="gcard glass reveal" style="--d:.34s"><div class="k">G-02 查重</div><h3>W 已 750°C 成相</h3><p>立方相已成，相对致密度与晶界电导<b>未见报道</b>。</p></div>
+      <div class="gcard glass reveal" style="--d:.4s"><div class="k">G-03 查重</div><h3>Ba × 助烧剂</h3><p>Ba–Ta 共掺需 1230°C。助烧剂降温路线，段落共现 <b>0</b>。</p></div>
+      <div class="gcard glass reveal" style="--d:.46s"><div class="k">G-04 查重</div><h3>Y × 两步烧结</h3><p>两步烧结在 Ta/Al/Nb 有先例，Y/Ce/Mg 等<b>均无报道</b>。</p></div>
       <div class="gcard glass reveal" style="--d:.52s"><div class="k">G-05 查重</div><h3>Ga × 秒级 UHS</h3><p>UHS 只在未掺杂和 Ta 上验证过。别名复查后收窄。</p></div>
       <div class="gcard glass gold reveal" style="--d:.58s"><div class="k">G-06 冲突</div><h3>1150°C 比 1230°C 更致密</h3><p>98.2% vs 93.9%。变量交叠，没有受控对比。</p></div>
-      <div class="gcard glass gold reveal" style="--d:.64s"><div class="k">G-07 冲突</div><h3>电导率差 4–5 个数量级</h3><p>同一样品 Ar 存放 10⁻⁹，空气暴露 10⁻⁴。多数文献不报气氛。</p></div>
-      <div class="gcard glass reveal" style="--d:.7s"><div class="k">G-08 拼图</div><h3>冷烧结 350°C 有密度没电导</h3><p>87.7% 致密，晶界相把电导打掉几个数量级。</p></div>
+      <div class="gcard glass gold reveal" style="--d:.64s"><div class="k">G-07 冲突</div><h3>电导率差 4–5 个数量级</h3><p>同一样品 Ar 存放 10⁻⁹，空气暴露 10⁻⁴。多数文献未报告测试气氛。</p></div>
+      <div class="gcard glass reveal" style="--d:.7s"><div class="k">G-08 拼图</div><h3>冷烧结 350°C 致密但电导差</h3><p>相对致密度 87.7%，晶界相使电导率下降数个数量级。</p></div>
       <div class="gcard glass reveal" style="--d:.76s"><div class="k">G-09 拼图</div><h3>Te 有电池演示，无工艺窗口</h3><p>50 篇 Te 文献里，专门烧结研究实质只有 1 篇。</p></div>
-      <div class="gcard glass reveal" style="--d:.82s"><div class="k">G-10 拼图</div><h3>补锂都在用，没人定量</h3><p>母粉法补锂普遍，最终 Li 含量对不上制度。</p></div>
+      <div class="gcard glass reveal" style="--d:.82s"><div class="k">G-10 拼图</div><h3>补锂普遍使用，无人定量</h3><p>母粉法补锂普遍，终产物 Li 含量与烧结制度缺乏定量关联。</p></div>
     </div>
     <div class="foot reveal" style="--d:.9s">
       <span>每条四字段：可检验假设 · 证据链 · 查重记录 · 验证路径</span>
-      <span>引句 24/24 对得上原文 · DOI 14/14 双源确认</span>
+      <span>引句核验 24/24 · DOI 双源确认 14/14</span>
     </div>
     <template class="notes-template">十条发现是交付物本体。挑两句讲：G-06 更高温度反而更不致密；G-07 同一样品气氛一换电导差四五个数量级。每条写了第一步实验。</template>
   </section>
@@ -457,7 +456,7 @@
   <!-- 6 loop (comet fx) -->
   <section class="slide" data-title="我们的 Loop 设计" id="loopSlide">
     <div class="bg-field"></div><div class="grid-field"></div>
-    <div class="eyebrow reveal" style="--d:.08s">05 · 设计 · 提出假设 → 回库去数 → 数清了再往下走</div>
+    <div class="eyebrow reveal" style="--d:.08s">05 · 设计 · 假设生成 → 回库计数 → 闸门裁决</div>
     <h2 class="title reveal" style="--d:.16s">我们的 <em>Loop</em> 设计</h2>
     <div class="loop2 reveal" id="loopStage" style="--d:.28s">
       <svg class="ringsvg" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
@@ -471,8 +470,8 @@
       <div class="lnode2 glass" data-li="0" style="left:50%;top:8%"><div class="k">1 SURVEY</div><b>全库漏斗</b><span>37.6M → 8,844 → 100</span></div>
       <div class="lnode2 glass" data-li="1" style="left:72.3%;top:16%"><div class="k">2 EXTRACT</div><b>字段抽取</b><span>1,922 条逐字证据</span></div>
       <div class="lnode2 glass gold" data-li="2" style="left:86.1%;top:37%"><div class="k">矩阵</div><b>21 × 8 共现</b><span>空格 / 冲突 / 缺环</span></div>
-      <div class="lnode2 glass" data-li="3" style="left:86.1%;top:63%"><div class="k">3 IDEATE</div><b>枚举假设</b><span>76 条候选</span></div>
-      <div class="lnode2 glass hot" data-li="4" style="left:72.3%;top:84%"><div class="k">4 CHECK</div><b>回库去数</b><span>共现 + 别名 + 排噪</span></div>
+      <div class="lnode2 glass" data-li="3" style="left:86.1%;top:63%"><div class="k">3 IDEATE</div><b>假设生成</b><span>76 条候选</span></div>
+      <div class="lnode2 glass hot" data-li="4" style="left:72.3%;top:84%"><div class="k">4 CHECK</div><b>回库计数</b><span>共现 + 别名复查</span></div>
       <div class="lnode2 glass" data-li="5" style="left:50%;top:92%"><div class="k">5 CITE</div><b>引句校验</b><span>逐字 · 双源</span></div>
       <div class="lnode2 glass hot" data-li="6" style="left:27.7%;top:84%"><div class="k">7 REFEREE</div><b>四道闸门</b><span>硬失败禁提交</span></div>
       <div class="lnode2 glass" data-li="7" style="left:13.9%;top:63%"><div class="k">8 HUMAN</div><b>逐条终审</b><span>人机结论分离</span></div>
@@ -481,37 +480,37 @@
       <div class="loopcore glass">
         <div class="k">EVIDENCE LOOP · T1 第一圈</div>
         <div class="big">76 → 10</div>
-        <div class="sub">闸门纠错 2 次 · 全程落盘可复算</div>
+        <div class="sub">闸门纠错 2 次 · 全程落盘可复现</div>
         <div class="nowline"><span id="loopName"></span><small id="loopSub"></small></div>
       </div>
     </div>
     <div class="foot reveal" style="--d:.66s">
-      <span>check 不交给另一个模型 · 环上没有「模型评价模型然后放行」这一段</span>
-      <span>T1 已转完第 1 圈 · 对应 05 文档 §3</span>
+      <span>核查靠检索计数，不靠 LLM-as-judge · 环上没有模型自我放行</span>
+      <span>T1 已完成第 1 轮外环 · 对应 05 文档 §3</span>
     </div>
-    <template class="notes-template">设计页。光点沿环飞一圈，走到哪讲到哪：提出假设、回库去数、闸门裁决、终审、路线、回流。重点一句：check 交给共现计数和原文匹配，不交给另一个模型。有先例归档，是噪声否决回流，真空白才进证据链。</template>
+    <template class="notes-template">设计页。光点沿环飞一圈，走到哪讲到哪：假设生成、回库计数、闸门裁决、终审、路线、回流。重点一句：核查交给共现计数和原文匹配，不交给另一个模型（无 LLM-as-judge）。有先例归档，是噪声否决回流，真空白才进证据链。</template>
   </section>
 
   <!-- 7 gates + arch fig -->
   <section class="slide" data-title="四道闸门，各有停止条件">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">06 · 设计 · 闸门与停止条件</div>
-    <h2 class="title reveal" style="--d:.16s">四道闸门。<em>模型不能给自己放行。</em></h2>
+    <h2 class="title reveal" style="--d:.16s">四道质量闸门。<em>模型不能自我放行。</em></h2>
     <div class="g7">
       <div class="gates">
-        <div class="gate glass reveal" style="--d:.28s"><div class="n">01</div><div class="k">新颖性</div><h3>共现计数 = 0</h3><p>段落级数过，再跑别名二轮，再排参考文献噪声。模型说「没人做过」不算。</p></div>
-        <div class="gate glass reveal" style="--d:.36s"><div class="n">02</div><div class="k">事实</div><h3>引句对得上原文</h3><p>s10 逐字匹配，s11 走 Crossref 和 Semantic Scholar。对不上就禁提交。</p></div>
-        <div class="gate glass reveal" style="--d:.44s"><div class="n">03</div><div class="k">判定器</div><h3>自己先过评估集</h3><p>27B 在 348 篇人工 gold 上调过，test F1 89.66%。先校准再上岗。</p></div>
-        <div class="gate glass reveal" style="--d:.52s"><div class="n">04</div><div class="k">过程</div><h3>每步留得下来</h3><p>EXECUTION_LOG、SHA-256、模型修订号。报告数字只能从落盘文件生成。</p></div>
+        <div class="gate glass reveal" style="--d:.28s"><div class="n">01</div><div class="k">新颖性</div><h3>共现计数 = 0</h3><p>段落级计数 + 别名复查 + 伪命中排除。模型口头的「没人做过」不作数。</p></div>
+        <div class="gate glass reveal" style="--d:.36s"><div class="n">02</div><div class="k">事实</div><h3>引句逐字核验</h3><p>s10 逐字匹配，s11 走 Crossref 和 Semantic Scholar。对不上就禁提交。</p></div>
+        <div class="gate glass reveal" style="--d:.44s"><div class="n">03</div><div class="k">判定器</div><h3>先过 gold 评估集</h3><p>27B 判定器在 348 篇人工标注 gold 集上校准，test F1 89.66%，再投入判定。</p></div>
+        <div class="gate glass reveal" style="--d:.52s"><div class="n">04</div><div class="k">过程</div><h3>全程留痕可审计</h3><p>EXECUTION_LOG、SHA-256、模型修订号。报告数字只能从落盘文件生成。</p></div>
       </div>
       <div class="figcard glass reveal" style="--d:.46s">
         <div class="frame">
           <svg class="dfig" viewBox="0 0 640 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
             <rect x="18" y="20" width="604" height="125" rx="12" fill="rgba(246,195,68,.05)" stroke="rgba(246,195,68,.28)"/>
-            <text x="34" y="46" font-size="15" font-weight="800" fill="#f6c344">校准层 · 拿放行权</text>
+            <text x="34" y="46" font-size="15" font-weight="800" fill="#f6c344">校准层 · 裁决与放行</text>
             <g font-size="13" text-anchor="middle">
-              <rect x="30" y="64" width="108" height="56" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="84" y="88" fill="#e9fbf7" font-weight="700">闸门 1</text><text x="84" y="108" fill="#8eacb6">新颖性复跑</text>
-              <rect x="148" y="64" width="108" height="56" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="202" y="88" fill="#e9fbf7" font-weight="700">闸门 2</text><text x="202" y="108" fill="#8eacb6">伪命中人审</text>
+              <rect x="30" y="64" width="108" height="56" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="84" y="88" fill="#e9fbf7" font-weight="700">闸门 1</text><text x="84" y="108" fill="#8eacb6">新颖性复核</text>
+              <rect x="148" y="64" width="108" height="56" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="202" y="88" fill="#e9fbf7" font-weight="700">闸门 2</text><text x="202" y="108" fill="#8eacb6">伪命中确认</text>
               <rect x="266" y="64" width="108" height="56" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="320" y="88" fill="#e9fbf7" font-weight="700">闸门 3</text><text x="320" y="108" fill="#8eacb6">引句 + 双源</text>
               <rect x="384" y="64" width="108" height="56" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="438" y="88" fill="#e9fbf7" font-weight="700">闸门 4</text><text x="438" y="108" fill="#8eacb6">过程校准</text>
               <rect x="502" y="64" width="108" height="56" rx="8" fill="rgba(246,195,68,.1)" stroke="rgba(246,195,68,.6)"/><text x="556" y="88" fill="#f6c344" font-weight="700">人工终审</text><text x="556" y="108" fill="#c9a23e">逐条放行</text>
@@ -525,7 +524,7 @@
               <rect x="30" y="240" width="88" height="52" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="74" y="271" fill="#d6f4ee">调研</text>
               <rect x="128" y="240" width="88" height="52" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="172" y="271" fill="#d6f4ee">抽取</text>
               <rect x="226" y="240" width="88" height="52" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="270" y="271" fill="#d6f4ee">假设</text>
-              <rect x="324" y="240" width="88" height="52" rx="8" fill="#07242f" stroke="rgba(255,92,120,.5)"/><text x="368" y="271" fill="#ffb9c6">回检</text>
+              <rect x="324" y="240" width="88" height="52" rx="8" fill="#07242f" stroke="rgba(255,92,120,.5)"/><text x="368" y="271" fill="#ffb9c6">核查</text>
               <rect x="422" y="240" width="88" height="52" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="466" y="271" fill="#d6f4ee">引证</text>
               <rect x="520" y="240" width="88" height="52" rx="8" fill="#07242f" stroke="rgba(108,240,220,.4)"/><text x="564" y="271" fill="#d6f4ee">路线</text>
             </g>
@@ -537,7 +536,7 @@
             <polygon points="326,320 338,320 332,310" fill="#6cf0dc" opacity=".8"/>
             <text x="348" y="344" font-size="12.5" fill="#6cf0dc">工具调用 · 只读证据</text>
             <rect x="18" y="368" width="604" height="112" rx="12" fill="rgba(108,240,220,.03)" stroke="rgba(108,240,220,.16)"/>
-            <text x="34" y="392" font-size="15" font-weight="800" fill="#8eacb6">数据层 · 只此一份，改不了</text>
+            <text x="34" y="392" font-size="15" font-weight="800" fill="#8eacb6">数据层 · 只读证据源</text>
             <g text-anchor="middle">
               <ellipse cx="120" cy="410" rx="72" ry="10" fill="#0a2933" stroke="rgba(108,240,220,.45)"/>
               <rect x="48" y="410" width="144" height="44" fill="#062028" stroke="rgba(108,240,220,.45)"/>
@@ -559,21 +558,21 @@
     </div>
     <div class="stop glass reveal" style="--d:.62s">
       <div><b>Ideation → Check</b>最多 3 轮 · T1 用了 2 轮</div>
-      <div><b>单条裁决</b>主查询 + 别名 · 76 条全裁完</div>
-      <div><b>引用校验</b>首轮 23/24，换一句后 24/24</div>
-      <div><b>外环</b>赛程内 2 圈 · 第 1 圈已完成</div>
+      <div><b>逐条裁决</b>主查询 + 别名 · 76 条全部完成</div>
+      <div><b>引句校验</b>首轮 23/24，替换一句后 24/24</div>
+      <div><b>外环</b>赛程内 2 轮 · 第 1 轮已完成</div>
     </div>
     <div class="foot reveal" style="--d:.72s">
-      <span>闸门 1 纠正过「LLZO:Ta」漏词 · 闸门 2 拦过控制字符引句 sim=0.881</span>
+      <span>闸门 1 修正过「LLZO:Ta」词族漏检 · 闸门 2 拦截过含控制字符的引句 sim=0.881</span>
       <span>对应 05 文档 §3.2 / §4</span>
     </div>
     <template class="notes-template">四道闸门对着 05 的 §4 讲，右边是三层体系图：数据层只读，推理层八角色，校准层在最上面拿放行权。新颖性是计数题；事实是原文对不对得上；判定器先过评估集；过程校准保证报告引不到未校验内容。底下一条是停止条件，循环不会空转。</template>
   </section>
 
   <!-- 8 replay: radar war-room -->
-  <section class="slide" data-title="现场回放 · 6 轮真实运行" id="runSlide">
+  <section class="slide" data-title="轨迹回放 · 6 轮真实运行" id="runSlide">
     <div class="bg-field"></div><div class="grid-field"></div>
-    <div class="eyebrow reveal" style="--d:.08s">07 · 效果 · 现场回放 · demo_run_20260816_010419</div>
+    <div class="eyebrow reveal" style="--d:.08s">07 · 效果 · 轨迹回放 · demo_run_20260816_010419</div>
     <h2 class="title reveal" style="--d:.14s">2026-08-16 凌晨 01:04，<i>一次真实运行</i></h2>
     <div class="replay2">
       <div class="radar glass reveal" style="--d:.24s" id="radar">
@@ -600,7 +599,7 @@
           <text id="hubR" x="470" y="305" text-anchor="middle" font-size="42" font-weight="800" fill="#f6c344">—</text>
           <text id="hubT" x="470" y="338" text-anchor="middle" font-size="18" fill="#6cf0dc">--:--:--</text>
         </svg>
-        <div class="radcap"><span>八角色作战图 · 光束 = 正在干活的角色</span><span id="radStat">trace.jsonl · <i>19 事件</i> · 确立 1 · 否决 1</span></div>
+        <div class="radcap"><span>八角色执行视图 · 光束 = 当前活跃角色</span><span id="radStat">trace.jsonl · <i>19 事件</i> · 确立 1 · 否决 1</span></div>
       </div>
       <div class="rside reveal" style="--d:.34s">
         <div class="hud2 glass" id="hud2"></div>
@@ -613,21 +612,21 @@
         <button type="button" class="playbtn" id="playbtn">▶ 重放</button>
       </div>
     </div>
-    <template class="notes-template">回放页自动播。雷达上八个角色，光束指到谁谁在干活，中心是轮次和真实时钟；右边是当轮动作、模型自己写的理由和 trace 日志；底下进度条 19 个事件，随便点一格跳到那一步。看两个高光：D-01 立住时全场金光；第 17 步模型谎报，Referee 红光报警当场否决。</template>
+    <template class="notes-template">回放页自动播。雷达上八个角色，光束指到谁谁在干活，中心是轮次和真实时钟；右边是当轮动作、模型自己写的理由和 trace 日志；底下进度条 19 个事件，随便点一格跳到那一步。看两个高光：D-01 确立时全场金光；第 17 步模型幻觉虚报，Referee 红光报警当场否决。</template>
   </section>
 
   <!-- 9 route C + route fig -->
   <section class="slide" data-title="路线 C · 空白变成可走的路线">
     <div class="bg-field"></div><div class="grid-field"></div>
     <div class="eyebrow reveal" style="--d:.08s">08 · 路线 C</div>
-    <h2 class="title reveal" style="--d:.16s">空白立住以后，<em>交给逆合成。</em></h2>
+    <h2 class="title reveal" style="--d:.16s">空白确立之后，<em>交给逆合成。</em></h2>
     <div class="rc">
       <div class="vflow">
         <div class="vnode glass reveal" style="--d:.28s"><span class="vk">IN</span><div><b>目标材料来自 Gap</b><span>比如 G-01 的 Sb0.4 + 助烧剂</span></div></div>
-        <div class="vnode glass reveal" style="--d:.36s"><span class="vk">POOL</span><div><b>三个方法先出 Top-k</b><span>ElemwiseRetro · Retrieval-Retro · SynthesisSimilarity</span></div></div>
+        <div class="vnode glass reveal" style="--d:.36s"><span class="vk">POOL</span><div><b>三个逆合成模型各出 Top-k</b><span>ElemwiseRetro · Retrieval-Retro · SynthesisSimilarity</span></div></div>
         <div class="vnode glass reveal" style="--d:.44s"><span class="vk">EVIDENCE</span><div><b>逐个候选回库查先例</b><span>直接先例和同族类比分开记</span></div></div>
-        <div class="vnode glass gold reveal" style="--d:.52s"><span class="vk">FUSE</span><div><b>模型只在证据里排序补全</b><span>温度气氛从同族先例分布取，参数编不出来</span></div></div>
-        <div class="vnode glass reveal" style="--d:.6s"><span class="vk">PLAN</span><div><b>组装成可走的步骤</b><span>前驱体 + 条件 + 顺序，每步带引文</span></div></div>
+        <div class="vnode glass gold reveal" style="--d:.52s"><span class="vk">FUSE</span><div><b>模型只在证据里排序补全</b><span>温度/气氛取自同族先例分布，不凭空生成</span></div></div>
+        <div class="vnode glass reveal" style="--d:.6s"><span class="vk">PLAN</span><div><b>组装为可执行步骤</b><span>前驱体 + 条件 + 顺序，每步带引文</span></div></div>
       </div>
       <div class="rcright">
         <div class="figcard glass reveal" style="--d:.44s">
@@ -667,13 +666,13 @@
               <rect x="24" y="258" width="170" height="74" rx="10" fill="#07242f" stroke="rgba(108,240,220,.5)"/>
               <text x="109" y="289" text-anchor="middle" font-size="14.5" font-weight="700" fill="#e9fbf7">路线计划</text>
               <text x="109" y="311" text-anchor="middle" font-size="11.5" fill="#8eacb6">步骤 + 条件 + 引文</text>
-              <text x="320" y="382" text-anchor="middle" font-size="14" font-weight="700" fill="#f6c344">候选不是模型编的 —— 方法出候选，证据定顺序</text>
+              <text x="320" y="382" text-anchor="middle" font-size="14" font-weight="700" fill="#f6c344">候选来自模型，排序来自证据 —— 不允许自由生成</text>
             </svg>
           </div>
           <div class="cap"><span>方法出候选 · 证据定顺序</span><i>对应 02 文档 §五</i></div>
         </div>
         <div class="valstrip">
-          <div class="card glass reveal" style="--d:.56s"><div class="k">定量</div><p><b>CEDER 2.4 万 DOI</b> 藏起真路线盲测，对照纯模型 / 纯检索。</p></div>
+          <div class="card glass reveal" style="--d:.56s"><div class="k">定量</div><p><b>CEDER 2.4 万 DOI</b> 隐藏真实路线盲测，对照纯模型 / 纯检索基线。</p></div>
           <div class="card glass reveal" style="--d:.62s"><div class="k">逐条</div><p>证据标三档：先例 / 类比 / 原理。<b>类比不能写成先例。</b></p></div>
           <div class="card glass reveal" style="--d:.68s"><div class="k">旁证</div><p>Materials Project 查形成能，<b>只当旁证</b>。</p></div>
         </div>
@@ -696,16 +695,16 @@
       <div class="core glass reveal" style="--d:.32s">
         <div class="logo-c mark-float" data-logo></div>
         <b>ANCOR</b>
-        <small>T1 第一圈已跑通</small>
+        <small>T1 第一轮外环已跑通</small>
       </div>
-      <div class="onode glass n1 reveal" style="--d:.46s"><i>报告</i><span>10 条 Gap<br>24 条可核对引文</span></div>
+      <div class="onode glass n1 reveal" style="--d:.46s"><i>报告</i><span>10 条 Gap<br>24 条可核验引句</span></div>
       <div class="onode glass n2 reveal" style="--d:.54s"><i>系统</i><span>八角色循环<br>四道闸门</span></div>
       <div class="onode glass n3 reveal" style="--d:.62s"><i>方案</i><span>路线 C<br>模板六章</span></div>
       <div class="onode glass n4 reveal" style="--d:.7s"><i>附件</i><span>12 个脚本<br>扫描与校验日志</span></div>
       <div class="onode glass n5 reveal" style="--d:.78s"><i>回放</i><span>6 轮 trace<br>确立 1 · 否决 1</span></div>
     </div>
-    <div class="closing reveal" style="--d:.92s">数字都能从附件包复算</div>
-    <template class="notes-template">收尾列交付物：报告、系统说明、Proposal、证据包、6 轮回放。结束一句：数字都能从附件包复算。</template>
+    <div class="closing reveal" style="--d:.92s">所有数字均可由附件复现</div>
+    <template class="notes-template">收尾列交付物：报告、系统说明、Proposal、证据包、6 轮回放。结束一句：所有数字均可由附件复现。</template>
   </section>
 </main>
 
@@ -745,7 +744,7 @@
   document.getElementById('tickerRoll').innerHTML = shard.repeat(4);
 
   /* ---- matrix console: all 64 cells clickable ---- */
-  const ROUTES = ['常规','热压','SPS','助烧剂','低温','两步','微波','UFS'];
+  const ROUTES = ['常规','热压','SPS','助烧剂','低温','两步','微波','UHS'];
   const RK = ['conv','hp','sps','flux','low','two','mw','ufs'];
   const ROWS = [
     {d:'Ta',v:[163,113,73,113,11,13,3,0]},
@@ -758,13 +757,13 @@
     {d:'Nd',v:[26,33,18,22,10,7,5,1]}
   ];
   const GAPS = {
-    'Sb|low':{tag:'ok',tagText:'G-01 · 立住',title:'Sb × 助烧剂 <900°C',meta:'121 篇 Sb 文献。低温路线两条表面共现，打开都是参考文献列表。别名复查 0。',quote:'已知：Sb 是有效 Zr 位掺杂，常规固相 1100–1200°C 成熟。未知：任何 <900°C 或助烧剂致密化数据。第一步：Li6.6La3Zr1.6Sb0.4O12 + 2–5 wt% Li3BO3，825°C / 6h。',nums:[['121','体系文献'],['2→0','噪声排除'],['0','有效先例']]},
-    'W|low':{tag:'ok',tagText:'G-02 · 立住',title:'W × <900°C 致密化',meta:'W 体系 118 篇。750°C 已能稳住立方相，这个温度下的致密度没人报。',quote:'10.1063/1.4818971 写了约 750°C 成相，没给相对致密度。当成已知边界，不当成致密化先例。',nums:[['118','体系文献'],['1','成相报道'],['0','致密≥90%']]},
-    'Ba|flux':{tag:'ok',tagText:'G-03 · 立住',title:'Ba × 助烧剂',meta:'Ba-Ta 共掺可以 1230°C 常压做出来。用助烧剂降温，段落共现是 0。',quote:'文档级宽松共现 24 篇，都是引言或参考文献里碰巧一起出现。段落级：0。',nums:[['74','体系文献'],['0','段落共现'],['24','文档级噪声']]},
-    'Y|two':{tag:'ok',tagText:'G-04 · 立住',title:'Y × 两步烧结',meta:'两步烧结在 Ta/Al/Nb 上有先例，Y、Ce、Mg、Sr、Zn、Bi、Ti、Sm 全是空的。',quote:'对容易异常长大的 Y-LLZO，可以试 T1≈1150°C 短烧 + T2≈1000°C 保温。',nums:[['13','两步×Ta'],['0','两步×Y'],['8','空着的体系']]},
-    'Ga|ufs':{tag:'ok',tagText:'G-05 · 收窄后立住',title:'Ga × 超快高温烧结',meta:'UHS 在未掺杂和 LLZO:Ta 上验证过。第一版因为别名漏词把 Ta 也算成空，复查后收窄。',quote:'Ga 容易挥发、窗口窄。秒级热历程有可能又致密又少掉 Ga。ufs×Ga/Al/Nb/W = 0。',nums:[['2','ufs×Ta'],['0','ufs×Ga'],['收窄','别名复查']]},
-    'Gd|mw':{tag:'ok',tagText:'D-01 · 演示立住',title:'Gd × 微波烧结',meta:'编排器现场产物。段落共现 4、别名 5，排完噪声有效检出是 0。引句 2/2，外部双源确认。',quote:'伪命中来自综述图注：Gd 掺杂的是 CeO2，不是 Gd-LLZO。Human Gate 演示里 simulated=true。',nums:[['4→0','共现排噪'],['5→0','别名排噪'],['2/2','引句通过']]},
-    'Nd|low':{tag:'bad',tagText:'D-02 · 否决',title:'Nd × <900°C',meta:'第 6 轮 planner 写成有效检出为零。Referee 强制重跑：有效检出 2 条，先例还在。',quote:'否决也是结果。这一轮原样留在 trace.jsonl 里。',nums:[['2','有效先例'],['0','别名有效'],['否决','闸门 1']]},
+    'Sb|low':{tag:'ok',tagText:'G-01 · 确立',title:'Sb × 助烧剂 <900°C',meta:'121 篇 Sb 文献。低温路线两条表面共现，打开都是参考文献列表。别名复查 0。',quote:'已知：Sb 是有效 Zr 位掺杂，常规固相 1100–1200°C 成熟。未知：任何 <900°C 或助烧剂致密化数据。第一步：Li6.6La3Zr1.6Sb0.4O12 + 2–5 wt% Li3BO3，825°C / 6h。',nums:[['121','体系文献'],['2→0','噪声排除'],['0','有效先例']]},
+    'W|low':{tag:'ok',tagText:'G-02 · 确立',title:'W × <900°C 致密化',meta:'W 体系 118 篇。750°C 可稳定立方相，该温度下的相对致密度未见报道。',quote:'10.1063/1.4818971 写了约 750°C 成相，没给相对致密度。当成已知边界，不当成致密化先例。',nums:[['118','体系文献'],['1','成相报道'],['0','致密≥90%']]},
+    'Ba|flux':{tag:'ok',tagText:'G-03 · 确立',title:'Ba × 助烧剂',meta:'Ba–Ta 共掺可在 1230°C 常压烧结。助烧剂降温路线，段落共现为 0。',quote:'文档级宽松共现 24 篇，都是引言或参考文献里碰巧一起出现。段落级：0。',nums:[['74','体系文献'],['0','段落共现'],['24','文档级噪声']]},
+    'Y|two':{tag:'ok',tagText:'G-04 · 确立',title:'Y × 两步烧结',meta:'两步烧结在 Ta/Al/Nb 上有先例，Y、Ce、Mg、Sr、Zn、Bi、Ti、Sm 均无报道。',quote:'对容易异常长大的 Y-LLZO，可以试 T1≈1150°C 短烧 + T2≈1000°C 保温。',nums:[['13','两步×Ta'],['0','两步×Y'],['8','空着的体系']]},
+    'Ga|ufs':{tag:'ok',tagText:'G-05 · 收窄后确立',title:'Ga × 超快高温烧结',meta:'UHS 在未掺杂和 LLZO:Ta 上验证过。第一版因为别名漏词把 Ta 也算成空，复查后收窄。',quote:'Ga 易挥发、工艺窗口窄。秒级热历程有望在致密化同时减少 Ga 挥发损失。ufs×Ga/Al/Nb/W = 0。',nums:[['2','ufs×Ta'],['0','ufs×Ga'],['收窄','别名复查']]},
+    'Gd|mw':{tag:'ok',tagText:'D-01 · 演示确立',title:'Gd × 微波烧结',meta:'编排器现场产物。段落共现 4、别名 5，排完噪声有效检出是 0。引句 2/2，外部双源确认。',quote:'伪命中来自综述图注：Gd 掺杂的是 CeO2，不是 Gd-LLZO。Human Gate 演示里 simulated=true。',nums:[['4→0','共现排噪'],['5→0','别名排噪'],['2/2','引句通过']]},
+    'Nd|low':{tag:'bad',tagText:'D-02 · 否决',title:'Nd × <900°C',meta:'第 6 轮 planner 写成有效检出为零。Referee 强制复核：有效检出 2 条，先例还在。',quote:'否决也是结果。这一轮原样留在 trace.jsonl 里。',nums:[['2','有效先例'],['0','别名有效'],['否决','闸门 1']]},
     'Ta|ufs':{tag:'warn',tagText:'已知 · 复查改过',title:'Ta × UHS 不是空白',meta:'第一版词典没收 LLZO:Ta，这格被算成 0。二轮复查找回同一篇 UHS 论文的 2 条命中。',quote:'10.1016/j.jeurceramsoc.2021.05.041：UHS 循环 10 秒完成。修正过程在 s8_verify_log.txt。',nums:[['2','有效先例'],['漏词','初判错了'],['收窄','G-05']]}
   };
   const tone = n => n===0?'z':n<5?'s':n<30?'m':'h';
@@ -795,10 +794,10 @@
     const base = { title: `${d} × ${route}`, nums: [[n,'段落共现'],[rowSum(d), d+' 全路线'],[colSum(ri), route+' 全掺杂']] };
     if (n === 0) return Object.assign(base, {tag:'warn', tagText:'零共现 · 候选空白',
       meta:`8,844 篇命中池里，${d} 掺杂与「${route}」路线的段落级共现是 0。零不等于空白成立——还要过别名二轮、伪命中排除、Referee 复跑三道检查。`,
-      quote:'空格只是候选。演示运行里 Gd × 微波就是从这样的格子出发，两轮计数后立卡的。'});
+      quote:'空格只是候选。演示运行里 Gd × 微波就是从这样的格子出发，两轮计数后确立的。'});
     if (n < 5) return Object.assign(base, {tag:'warn', tagText:'薄弱区 · 逐条人裁',
-      meta:`只有 ${n} 条段落级共现。可能是早期先例，也可能是引言里捎带一提的伪命中——立不立卡要逐条读原文再裁。`,
-      quote:'Nd × 低温就是这种格子：4 条命中里 2 条是真先例，闸门复跑后把「空白」提议当场否决。'});
+      meta:`只有 ${n} 条段落级共现。可能是早期先例，也可能是引言里捎带一提的伪命中——确立与否要逐条读原文再裁定。`,
+      quote:'Nd × 低温就是这种格子：4 条命中里 2 条是真先例，闸门复核后把「空白」提议当场否决。'});
     if (n < 30) return Object.assign(base, {tag:'ok', tagText:'有文献基础',
       meta:`${n} 条段落级共现：有人做过，但没做透。适合在条件维度找缺口——气氛、升温速率、保温时间往往没报全。`,
       quote:'G-07 的气氛冲突就是从这类格子翻出来的：同一样品 Ar 下 10⁻⁹，空气下 10⁻⁴。'});
@@ -835,8 +834,8 @@
     ['SURVEY · 全库漏斗','37.6M → 8,844 → 500 → 100'],
     ['EXTRACT · 字段抽取','1,922 条逐字证据 · DOI + 段落号'],
     ['矩阵 · 知识的形状','21 × 8 段落级共现 + 条件分布'],
-    ['IDEATE · 枚举假设','76 条候选：空格 / 冲突 / 拼图'],
-    ['CHECK · 回库去数','共现 + 别名二轮 + 伪命中排除'],
+    ['IDEATE · 假设生成','76 条候选：查重 / 冲突 / 拼图'],
+    ['CHECK · 回库计数','共现 + 别名复查 + 伪命中排除'],
     ['CITE · 引句校验','逐字 24/24 · 双源 14/14'],
     ['REFEREE · 四道闸门','hard_failures 非空 = 禁提交'],
     ['HUMAN · 逐条终审','人机结论字段分离'],
@@ -905,7 +904,7 @@
   addEventListener('resize', ()=>{ if (fxRaf) sizeFx(); });
 
   /* ---- replay: radar engine ---- */
-  const RN = ['调研','抽取','假设','回检','引证','裁判','人审','路线'];
+  const RN = ['调研','抽取','假设','核查','引句','裁判','人工','路线'];
   const RCX = 470, RCY = 310, RRD = 252;
   const npos = RN.map((_,i)=>{ const a = (-90 + i*45) * Math.PI/180; return [RCX + RRD*Math.cos(a), RCY + RRD*Math.sin(a)]; });
   const radNodesEl = document.getElementById('radNodes');
@@ -917,24 +916,24 @@
   const radar = document.getElementById('radar');
   const STEPS = [
     {t:'01:04:22',r:0,n:-1,act:'编排层启动',why:'语料域：T1 落盘的 8,844 篇命中池。停止条件写死在编排层：最多 8 轮、24 次工具调用、目标裁决 2 条。',log:'$ python agent_runtime/orchestrator.py --backend qwen36-27b@vllm'},
-    {t:'01:04:22',r:0,n:-1,act:'读入矩阵与词典',why:'21×8 共现矩阵、掺杂词族、烧结路线词典全部来自 T1 落盘文件，不现编。',log:'run_start · docs=8844 · max_rounds=8 · target_gaps=2'},
-    {t:'01:04:25',r:1,n:2,act:'R1 · planner 挑了 Gd × 微波',why:'模型自己写的理由：T1 已覆盖 Sb / W / Ba，先查冷门稀土 Gd 配微波烧结有没有直接文献。',log:'planner → call_tool cooccur_count(dopant=Gd, route=microwave)'},
+    {t:'01:04:22',r:0,n:-1,act:'读入矩阵与词典',why:'21×8 共现矩阵、掺杂词族、烧结路线词典全部来自 T1 落盘文件。',log:'run_start · docs=8844 · max_rounds=8 · target_gaps=2'},
+    {t:'01:04:25',r:1,n:2,act:'R1 · planner 选定 Gd × 微波',why:'模型自己写的理由：T1 已覆盖 Sb / W / Ba，先查冷门稀土 Gd 配微波烧结有没有直接文献。',log:'planner → call_tool cooccur_count(dopant=Gd, route=microwave)'},
     {t:'01:04:34',r:1,n:3,act:'共现计数：4 条，有效 0',why:'扫了 9.8 秒。四条命中全落在综述图注和参考文献列表里，宿主材料是 CeO2 / LSGM，不是 Gd-LLZO。',log:'tool ← para_hits=4 · effective=0 · loose_docs=12 · 9.8s'},
-    {t:'01:04:37',r:2,n:2,act:'R2 · 零命中必须补别名',why:'纪律写在 prompt 里：共现为 0 时必须再跑 X-LLZO / LLZO:X 词族，防缩写漏检。模型照做了。',log:'planner → call_tool alias_check(dopant=Gd, route=microwave)'},
-    {t:'01:04:39',r:2,n:3,act:'别名二轮：5 条，有效 0',why:'2.3 秒。五条还是参考文献噪声。两轮数完，这格是真空白，可以提议了。',log:'tool ← alias_hits=5 · effective=0 · 2.3s'},
+    {t:'01:04:37',r:2,n:2,act:'R2 · 零命中触发别名复查',why:'规则写在系统提示词里：共现为 0 时必须复查 X-LLZO / LLZO:X 词族，防缩写漏检。模型照做了。',log:'planner → call_tool alias_check(dopant=Gd, route=microwave)'},
+    {t:'01:04:39',r:2,n:3,act:'别名复查：5 条，有效 0',why:'2.3 秒。五条还是参考文献噪声。两轮数完，这格是真空白，可以提议了。',log:'tool ← alias_hits=5 · effective=0 · 2.3s'},
     {t:'01:04:45',r:3,n:2,act:'R3 · 模型提议确立 D-01',why:'陈述、已知/未知边界、证据编号都要给全。提议只是提议，放行权在闸门。',log:'planner → propose_gap(Gd × microwave, type=查重型)'},
-    {t:'01:04:45',r:3,n:5,act:'闸门 1 · 新颖性复跑',why:'Referee 不信 planner 的转述，用同一套工具重新数：para 4 / 有效 0 / 别名 5。通过。',log:'gate1_novelty ← PASS · recount effective=0'},
+    {t:'01:04:45',r:3,n:5,act:'闸门 1 · 新颖性复核',why:'Referee 不采信 planner 的转述，用同一套工具独立重数：para 4 / 有效 0 / 别名 5。通过。',log:'gate1_novelty ← PASS · recount effective=0'},
     {t:'01:04:45',r:3,n:5,act:'闸门 2 · 伪命中人工确认',why:'9 条伪命中逐条给出排除理由。演示运行自动通过，simulated=true 写进产物。',log:'gate2_pseudo_hit ← PASS · simulated=true'},
     {t:'01:04:46',r:3,n:4,act:'闸门 3a · 引句逐字校验',why:'两条支撑引句回原文做归一化子串匹配：2/2 通过，sha256 前缀一致。',log:'gate3_internal ← 2/2 · hard_failures=[]'},
     {t:'01:04:48',r:3,n:4,act:'闸门 3b · 外部双源',why:'Crossref 和 Semantic Scholar 都查到这个 DOI，标题相似度 1.0。',log:'gate3_external ← DOI 双源确认 · sim=1.0'},
-    {t:'01:04:48',r:3,n:6,act:'D-01 立住，等人工终审',why:'Gd × 微波烧结进入 established_pending_human_review，写进 gap_cards.json。',log:'gap_adjudicated D-01 · ESTABLISHED',a:'ok'},
-    {t:'01:04:50',r:4,n:2,act:'R4 · 换 Nd × <900°C',why:'模型的理由：稀土掺杂通常要高温稳相，低温烧结可能有动力学障碍，值得排查。',log:'planner → call_tool cooccur_count(dopant=Nd, route=lowtemp_lt900)'},
+    {t:'01:04:48',r:3,n:6,act:'D-01 确立，待人工终审',why:'Gd × 微波烧结进入 established_pending_human_review，写进 gap_cards.json。',log:'gap_adjudicated D-01 · ESTABLISHED',a:'ok'},
+    {t:'01:04:50',r:4,n:2,act:'R4 · 转向 Nd × <900°C',why:'模型的理由：稀土掺杂通常要高温稳相，低温烧结可能有动力学障碍，值得排查。',log:'planner → call_tool cooccur_count(dopant=Nd, route=lowtemp_lt900)'},
     {t:'01:05:47',r:4,n:3,act:'共现计数：4 条，有效 2',why:'这次扫了 57.2 秒。两条不是噪声：SPS 和 UHS 的石榴石族低温先例。文档级宽松命中 213 条，更说明必须段落级。',log:'tool ← para_hits=4 · effective=2 · loose_docs=213 · 57.2s'},
-    {t:'01:05:50',r:5,n:2,act:'R5 · 模型还想再确认别名',why:'别名复查本身合规：确认没有缩写漏检。主查询那 2 条先例不会因此消失。',log:'planner → call_tool alias_check(dopant=Nd, route=lowtemp_lt900)'},
-    {t:'01:06:11',r:5,n:3,act:'别名二轮：1 条，有效 0',why:'21.5 秒。别名侧没有新证据——但主查询的 2 条有效先例仍然成立。',log:'tool ← alias_hits=1 · effective=0 · 21.5s'},
-    {t:'01:06:16',r:6,n:2,act:'R6 · 模型写「有效检出为零」',why:'它把 2 条有效命中说成零，提交 propose_gap，想把这格立成空白。谎报发生在这一步。',log:'planner → propose_gap(Nd × <900°C) ⚠ 与检索事实不符',b:'wait'},
-    {t:'01:06:16',r:6,n:5,act:'闸门 1 复跑 · 当场否决',why:'Referee 重新计数：有效命中还是 2。D-02 在 gate1 被裁掉，SPS/UHS 先例原文回填给下一轮。这一轮原样留在 trace。',log:'gap_adjudicated D-02 · REJECTED at gate1_novelty',b:'bad'},
-    {t:'01:06:16',r:6,n:-1,act:'停：裁决数到达目标',why:'6 轮 · 4 次工具 · 6 次 LLM 调用 · 0 解析失败。确立 1 条，否决 1 条，谎报被闸门接住。',log:'run_end · established=1 · rejected=1 · trace=19 行'}
+    {t:'01:05:50',r:5,n:2,act:'R5 · 别名复查（流程合规）',why:'按流程确认没有缩写漏检。主查询的 2 条有效先例不会因此消失。',log:'planner → call_tool alias_check(dopant=Nd, route=lowtemp_lt900)'},
+    {t:'01:06:11',r:5,n:3,act:'别名复查：1 条，有效 0',why:'21.5 秒。别名侧没有新证据——但主查询的 2 条有效先例仍然成立。',log:'tool ← alias_hits=1 · effective=0 · 21.5s'},
+    {t:'01:06:16',r:6,n:2,act:'R6 · planner 报告「有效检出为零」',why:'与工具返回不符：把 2 条有效命中报告为 0，并提交 propose_gap。幻觉发生在这一步。',log:'planner → propose_gap(Nd × <900°C) ⚠ 与检索事实不符',b:'wait'},
+    {t:'01:06:16',r:6,n:5,act:'闸门 1 复核 · 当场否决',why:'Referee 重新计数：有效命中还是 2。D-02 在 gate1 被裁掉，SPS/UHS 先例原文回填给下一轮。这一轮原样留在 trace。',log:'gap_adjudicated D-02 · REJECTED at gate1_novelty',b:'bad'},
+    {t:'01:06:16',r:6,n:-1,act:'停：裁决数到达目标',why:'6 轮 · 4 次工具 · 6 次 LLM 调用 · 0 解析失败。确立 1 条，否决 1 条，幻觉被闸门拦截。',log:'run_end · established=1 · rejected=1 · trace=19 行'}
   ];
   const hud2 = document.getElementById('hud2'), logbox = document.getElementById('logbox');
   const chipA = document.getElementById('chipA'), chipB = document.getElementById('chipB');
@@ -986,9 +985,9 @@
     hud2.innerHTML = `<div class="clock">${s.t}</div><div class="act">${s.act}</div><div class="why">${s.why}</div><div class="statline"><span>ROUND ${s.r||'–'}/6</span><span>T+${Math.max(0,secOf(s.t))}s</span><span>TOOLS 4 · PARSE-FAIL 0</span></div>`;
     typeLine(`[${s.t}] ${s.log}`, !live);
     segs.forEach((el,i)=>{ el.classList.toggle('past', i < j); el.classList.toggle('now', i === j); });
-    if (s.a === 'ok') setChip(chipA, 'st-ok', 'D-01 · Gd×微波', '立住 · 4→0 / 5→0 · 引句 2/2');
-    if (s.b === 'wait') setChip(chipB, 'st-wait', 'D-02 · Nd×低温', '模型称零命中 · Referee 复跑中');
-    if (s.b === 'bad') setChip(chipB, 'st-bad', 'D-02 · Nd×低温', '否决 · 复跑数出 2 条先例');
+    if (s.a === 'ok') setChip(chipA, 'st-ok', 'D-01 · Gd×微波', '确立 · 共现 4→0 · 引句 2/2');
+    if (s.b === 'wait') setChip(chipB, 'st-wait', 'D-02 · Nd×低温', '模型报零命中 · Referee 复核中');
+    if (s.b === 'bad') setChip(chipB, 'st-bad', 'D-02 · Nd×低温', '否决 · 复核数出 2 条先例');
     if (live && !RM) {
       const color = s.b==='bad' ? '#ff5c78' : s.a==='ok' ? '#f6c344' : '#6cf0dc';
       const p = s.n >= 0 ? npos[s.n] : [RCX, RCY];
@@ -1002,7 +1001,7 @@
     rnodes.forEach(g=>g.className.baseVal = 'rn');
     radBeam.setAttribute('opacity', '0');
     hubR.textContent = '—'; hubT.textContent = '--:--:--';
-    hud2.innerHTML = '<div class="clock">--:--:--</div><div class="act">待机 · 翻到本页自动播放</div><div class="why">这不是动画脚本，是 demo_run_20260816_010419/trace.jsonl 的逐行回放：理由是模型自己写的，否决是闸门当场裁的。进度条 19 格，点任意一格跳到那一步。</div><div class="statline"><span>ROUND –/6</span><span>T+0s</span><span>TOOLS 4 · PARSE-FAIL 0</span></div>';
+    hud2.innerHTML = '<div class="clock">--:--:--</div><div class="act">待机 · 翻到本页自动播放</div><div class="why">这不是动画脚本，是 demo_run_20260816_010419/trace.jsonl 的逐行回放：决策理由取自模型输出原文，否决由 Referee 闸门当场判定。进度条 19 格，点任意一格跳到那一步。</div><div class="statline"><span>ROUND –/6</span><span>T+0s</span><span>TOOLS 4 · PARSE-FAIL 0</span></div>';
     logbox.innerHTML = '<div class="row">$ tail -f agent_runtime/demo_run_20260816_010419/trace.jsonl</div>';
     segs.forEach(el=>el.classList.remove('past','now'));
     setChip(chipA, '', 'D-01 · Gd×微波', '待裁决');
@@ -1028,6 +1027,7 @@
 
   /* ---- deck controller ---- */
   const slides = [...document.querySelectorAll('.slide')];
+  const brandLock = document.querySelector('.brand-lock');
   const notesPanel = document.getElementById('notes'), notesText = document.getElementById('notesText');
   const slideCount = document.getElementById('slideCount'), progress = document.getElementById('progress');
   let cur = 0;
@@ -1038,6 +1038,7 @@
     const tpl = slides[cur].querySelector('.notes-template');
     notesText.textContent = tpl ? tpl.innerHTML.trim() : '';
     document.title = slides[cur].dataset.title + ' · ANCOR';
+    brandLock.style.display = slides[cur].classList.contains('cover') ? 'none' : 'flex';
     location.hash = 'p' + (cur+1);
     if (slides[cur].id === 'runSlide') { setTimeout(play, 650); }
     else { clearInterval(playTimer); clearInterval(typeTimer); playTimer = null; }
