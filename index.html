@@ -384,7 +384,7 @@
       <span>规则筛在 CEDER 集回放召回率 <i>99.41%</i> · 逆合成候选库 1,713 万条</span>
       <span>s2_scan_stats.json</span>
     </div>
-    <template class="notes-template">这页只讲规模。3757 万自建全文，扫一遍 462 秒。下面滚动的是真实的语料分片：按出版社切的 parquet。对比 SciAgents 千篇级、官方 Sci-Base 两千五百万。我们的空白是全库计数出来的。</template>
+    <template class="notes-template">这页只讲规模。3,757 万自建全文，全库扫描 462 秒。下面滚动的是真实的语料分片：按出版社切的 parquet。对比 SciAgents 千篇级、官方 Sci-Base 两千五百万。我们的空白是全库计数出来的。</template>
   </section>
 
   <!-- 3 funnel -->
@@ -566,7 +566,7 @@
       <span>闸门 1 修正过「LLZO:Ta」词族漏检 · 闸门 2 拦截过含控制字符的引句 sim=0.881</span>
       <span>对应 05 文档 §3.2 / §4</span>
     </div>
-    <template class="notes-template">四道闸门对着 05 的 §4 讲，右边是三层体系图：数据层只读，推理层八角色，校准层在最上面拿放行权。新颖性是计数题；事实是原文对不对得上；判定器先过评估集；过程校准保证报告引不到未校验内容。底下一条是停止条件，循环不会空转。</template>
+    <template class="notes-template">四道闸门对着 05 的 §4 讲，右边是三层体系图：数据层只读，推理层八角色，校准层在最上面负责裁决与放行。新颖性是计数题；事实核验看引句与原文是否逐字一致；判定器先过 gold 评估集；过程校准保证报告引不到未校验内容。底下一条是停止条件，循环不会空转。</template>
   </section>
 
   <!-- 8 replay: radar war-room -->
@@ -612,7 +612,7 @@
         <button type="button" class="playbtn" id="playbtn">▶ 重放</button>
       </div>
     </div>
-    <template class="notes-template">回放页自动播。雷达上八个角色，光束指到谁谁在干活，中心是轮次和真实时钟；右边是当轮动作、模型自己写的理由和 trace 日志；底下进度条 19 个事件，随便点一格跳到那一步。看两个高光：D-01 确立时全场金光；第 17 步模型幻觉虚报，Referee 红光报警当场否决。</template>
+    <template class="notes-template">回放页自动播。雷达上八个角色，光束指向当前活跃角色，中心是轮次和真实时钟；右边是当轮动作、模型输出的原始理由和 trace 日志；底下进度条 19 个事件，随便点一格跳到那一步。看两个高光：D-01 确立时全场金光；第 17 步模型幻觉虚报，Referee 红光报警当场否决。</template>
   </section>
 
   <!-- 9 route C + route fig -->
